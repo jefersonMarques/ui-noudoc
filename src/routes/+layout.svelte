@@ -4,4 +4,6 @@
 	const { children } = $props();
 </script>
 
-{@render children()}
+<div class="style-vega min-h-screen bg-background text-foreground">
+	{@render children()}
+</div>
