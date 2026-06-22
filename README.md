@@ -1,6 +1,6 @@
 # @noudoc/ui
 
-Projeto limpo para padronizar os projetos Noudoc usando componentes oficiais do `shadcn-svelte`.
+Biblioteca de UI da Noudoc baseada em componentes oficiais do `shadcn-svelte`.
 
 ## Regra principal
 
@@ -18,21 +18,15 @@ Componentes próprios da Noudoc devem ficar separados em:
 src/lib/components/noudoc
 ```
 
-## Setup limpo
-
-O projeto já foi criado com SvelteKit Library + Tailwind CSS.
-
-Rode localmente:
+## Rodar localmente
 
 ```bash
 npm install
-npm run ui:init
-npm run ui:add:base
 npm run check
 npm run dev
 ```
 
-## Componentes oficiais adicionados pelo comando
+## Componentes oficiais instalados
 
 ```txt
 button
@@ -54,22 +48,21 @@ empty
 sidebar
 ```
 
-## Subir no GitHub
+O `sidebar` também instala dependências oficiais como `sheet`, `skeleton` e `is-mobile`.
 
-Crie o repositório vazio no GitHub com o nome `noudoc-ui` e rode:
+## Atualizar componentes oficiais
+
+Use sempre a CLI do shadcn-svelte:
 
 ```bash
-git init
-git add .
-git commit -m "Initial clean shadcn-svelte setup"
-git branch -M main
-git remote add origin https://github.com/jefersonMarques/noudoc-ui.git
-git push -u origin main
+npm run ui:add:base
 ```
 
-## Depois do shadcn oficial
+Evite alterar manualmente arquivos em `src/lib/components/ui`, porque isso quebra a compatibilidade com o padrão do shadcn.
 
-Só depois de rodar `npm run ui:add:base`, crie os componentes próprios de produto:
+## Componentes Noudoc
+
+Depois da base oficial, crie os padrões próprios de produto em:
 
 ```txt
 src/lib/components/noudoc/app-shell.svelte
