@@ -11,9 +11,17 @@
       Projeto limpo para usar componentes oficiais do shadcn-svelte e componentes próprios Noudoc separados.
     </p>
 
-    <pre class="mt-4 overflow-auto rounded-lg border bg-muted p-4 text-left text-sm"><code>npm run ui:init
-npm run ui:add:base
-npm run check
+    <div class="mt-2 flex justify-center gap-2">
+      <a class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-xs hover:bg-primary/90" href="/components">
+        Ver componentes
+      </a>
+      <a class="inline-flex h-9 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-xs hover:bg-accent hover:text-accent-foreground" href="https://www.shadcn-svelte.com/docs/components" target="_blank" rel="noreferrer">
+        Docs shadcn
+      </a>
+    </div>
+
+    <pre class="mt-4 overflow-auto rounded-lg border bg-muted p-4 text-left text-sm"><code>npm run check
+npm run build
 npm run dev</code></pre>
   </section>
 </main>
