@@ -11,9 +11,12 @@
       Projeto limpo para usar componentes oficiais do shadcn-svelte e componentes próprios Noudoc separados.
     </p>
 
-    <div class="mt-2 flex justify-center gap-2">
+    <div class="mt-2 flex flex-wrap justify-center gap-2">
       <a class="inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-xs hover:bg-primary/90" href="/components">
-        Ver componentes
+        Ver componentes oficiais
+      </a>
+      <a class="inline-flex h-9 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-xs hover:bg-accent hover:text-accent-foreground" href="/noudoc">
+        Ver componentes Noudoc
       </a>
       <a class="inline-flex h-9 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-xs hover:bg-accent hover:text-accent-foreground" href="https://www.shadcn-svelte.com/docs/components" target="_blank" rel="noreferrer">
         Docs shadcn
