@@ -12,7 +12,7 @@ Componentes oficiais ficam em:
 src/lib/components/ui
 ```
 
-Componentes próprios da Noudoc devem ficar separados em:
+Componentes próprios da Noudoc ficam separados em:
 
 ```txt
 src/lib/components/noudoc
@@ -23,7 +23,15 @@ src/lib/components/noudoc
 ```bash
 npm install
 npm run check
+npm run build
 npm run dev
+```
+
+Rotas úteis:
+
+```txt
+/components  componentes oficiais
+/noudoc      componentes próprios Noudoc
 ```
 
 ## Componentes oficiais instalados
@@ -62,14 +70,22 @@ Evite alterar manualmente arquivos em `src/lib/components/ui`, porque isso quebr
 
 ## Componentes Noudoc
 
-Depois da base oficial, crie os padrões próprios de produto em:
+Primeiros componentes próprios criados:
 
 ```txt
+src/lib/components/noudoc/action-menu.svelte
 src/lib/components/noudoc/app-shell.svelte
-src/lib/components/noudoc/page-header.svelte
 src/lib/components/noudoc/data-toolbar.svelte
 src/lib/components/noudoc/metric-card.svelte
+src/lib/components/noudoc/page-header.svelte
+src/lib/components/noudoc/section-header.svelte
 src/lib/components/noudoc/status-badge.svelte
 ```
 
 Esses componentes podem compor os oficiais, mas não devem substituir os componentes base do shadcn.
+
+## Importação
+
+```ts
+import { Button, Card, PageHeader, MetricCard, StatusBadge } from "@noudoc/ui";
+```
