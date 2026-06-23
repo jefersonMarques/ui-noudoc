@@ -1,13 +1,15 @@
-<script lang="ts">
-	import type { Snippet } from "svelte";
-	import type { HTMLAttributes } from "svelte/elements";
-	import { cn, type WithElementRef } from "$lib/utils.js";
-
+<script lang="ts" module>
 	export type AppShellNavItem = {
 		label: string;
 		href?: string;
 		active?: boolean;
 	};
+</script>
+
+<script lang="ts">
+	import type { Snippet } from "svelte";
+	import type { HTMLAttributes } from "svelte/elements";
+	import { cn, type WithElementRef } from "$lib/utils.js";
 
 	let {
 		ref = $bindable(null),
@@ -37,17 +39,27 @@
 
 			<nav class="grid gap-1">
 				{#each navItems as item}
-					<svelte:element
-						this={item.href ? "a" : "button"}
-						href={item.href}
-						type={item.href ? undefined : "button"}
-						class={cn(
-							"rounded-md px-3 py-2 text-left text-sm transition hover:bg-accent hover:text-accent-foreground",
-							item.active ? "bg-accent font-medium text-accent-foreground" : "text-muted-foreground"
-						)}
-					>
-						{item.label}
-					</svelte:element>
+					{#if item.href}
+						<a
+							href={item.href}
+							class={cn(
+								"rounded-md px-3 py-2 text-left text-sm transition hover:bg-accent hover:text-accent-foreground",
+								item.active ? "bg-accent font-medium text-accent-foreground" : "text-muted-foreground"
+							)}
+						>
+							{item.label}
+						</a>
+					{:else}
+						<button
+							type="button"
+							class={cn(
+								"rounded-md px-3 py-2 text-left text-sm transition hover:bg-accent hover:text-accent-foreground",
+								item.active ? "bg-accent font-medium text-accent-foreground" : "text-muted-foreground"
+							)}
+						>
+							{item.label}
+						</button>
+					{/if}
 				{/each}
 			</nav>
 		</aside>
