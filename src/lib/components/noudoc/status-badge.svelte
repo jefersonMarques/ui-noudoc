@@ -12,7 +12,7 @@
 		children,
 		class: className,
 		...restProps
-	}: WithElementRef<HTMLAnchorAttributes, HTMLAnchorElement> & {
+	}: WithElementRef<HTMLAnchorAttributes, HTMLElement> & {
 		status?: Status;
 		children?: Snippet;
 	} = $props();
@@ -27,7 +27,7 @@
 	};
 </script>
 
-<Badge bind:this={ref} variant="outline" class={cn("gap-1.5", statusClass[status], className)} {...restProps}>
+<Badge bind:ref variant="outline" class={cn("gap-1.5", statusClass[status], className)} {...restProps}>
 	<span class="size-1.5 rounded-full bg-current opacity-70"></span>
 	{@render children?.()}
 </Badge>
