@@ -7,6 +7,7 @@ export * as Dialog from "./components/ui/dialog/index.js";
 
 export { default as Alert } from "./components/noudoc/alert.svelte";
 export type { AlertTone } from "./components/noudoc/alert.svelte";
+export { default as EmptyState } from "./components/noudoc/empty-state.svelte";
 export { default as LoadingState } from "./components/noudoc/loading-state.svelte";
 export { default as PageHeader } from "./components/noudoc/page-header.svelte";
 export { default as SectionHeader } from "./components/noudoc/section-header.svelte";
