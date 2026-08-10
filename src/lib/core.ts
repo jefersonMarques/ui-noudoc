@@ -3,6 +3,7 @@ export { Input } from "./components/ui/input/index.js";
 export { Textarea } from "./components/ui/textarea/index.js";
 export { Badge } from "./components/ui/badge/index.js";
 export * as Card from "./components/ui/card/index.js";
+export * as Dialog from "./components/ui/dialog/index.js";
 
 export { default as Alert } from "./components/noudoc/alert.svelte";
 export type { AlertTone } from "./components/noudoc/alert.svelte";
