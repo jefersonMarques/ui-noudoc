@@ -1,10 +1,25 @@
 export { default as ActionMenu } from "./action-menu.svelte";
+export { default as Alert } from "./alert.svelte";
+export { default as AppHeader } from "./app-header.svelte";
 export { default as AppShell } from "./app-shell.svelte";
+export { default as AppSidebar } from "./app-sidebar.svelte";
 export { default as DataToolbar } from "./data-toolbar.svelte";
+export { default as EmptyState } from "./empty-state.svelte";
+export { default as LoadingState } from "./loading-state.svelte";
 export { default as MetricCard } from "./metric-card.svelte";
+export { default as OrganizationRail } from "./organization-rail.svelte";
+export { default as OrganizationSwitcher } from "./organization-switcher.svelte";
 export { default as PageHeader } from "./page-header.svelte";
 export { default as SectionHeader } from "./section-header.svelte";
 export { default as StatusBadge } from "./status-badge.svelte";
+export { default as ViewTabs } from "./view-tabs.svelte";
+export { default as WorkspaceSwitcher } from "./workspace-switcher.svelte";
 
 export type { ActionMenuItem } from "./action-menu.svelte";
+export type { AlertTone } from "./alert.svelte";
 export type { AppShellNavItem } from "./app-shell.svelte";
+export type { AppSidebarItem } from "./app-sidebar.svelte";
+export type { OrganizationRailItem } from "./organization-rail.svelte";
+export type { OrganizationSwitcherOption } from "./organization-switcher.svelte";
+export type { ViewTabItem } from "./view-tabs.svelte";
+export type { WorkspaceSwitcherOption } from "./workspace-switcher.svelte";
