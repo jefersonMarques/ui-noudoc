@@ -22,3 +22,5 @@ export { default as OrganizationSwitcher } from "./components/noudoc/organizatio
 export type { OrganizationSwitcherOption } from "./components/noudoc/organization-switcher.svelte";
 export { default as WorkspaceSwitcher } from "./components/noudoc/workspace-switcher.svelte";
 export type { WorkspaceSwitcherOption } from "./components/noudoc/workspace-switcher.svelte";
+export { default as ViewTabs } from "./components/noudoc/view-tabs.svelte";
+export type { ViewTabItem } from "./components/noudoc/view-tabs.svelte";
