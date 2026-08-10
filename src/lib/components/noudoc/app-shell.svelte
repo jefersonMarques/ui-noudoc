@@ -17,6 +17,7 @@
 		description = "Design System",
 		navItems = [],
 		rail,
+		showRail = true,
 		sidebar,
 		header,
 		children,
@@ -28,17 +29,19 @@
 		description?: string;
 		navItems?: AppShellNavItem[];
 		rail?: Snippet;
+		showRail?: boolean;
 		sidebar?: Snippet;
 		header?: Snippet;
 		children?: Snippet;
 		mobileSidebarOpen?: boolean;
 	} = $props();
 
-	let contextual = $derived(Boolean(rail || sidebar));
+	let hasRail = $derived(Boolean(rail && showRail));
+	let contextual = $derived(Boolean(hasRail || sidebar));
 	let gridClass = $derived(
-		rail && sidebar
+		hasRail && sidebar
 			? "lg:grid-cols-[56px_240px_minmax(0,1fr)]"
-			: rail
+			: hasRail
 				? "lg:grid-cols-[56px_minmax(0,1fr)]"
 				: "lg:grid-cols-[240px_minmax(0,1fr)]"
 	);
@@ -47,7 +50,7 @@
 <div bind:this={ref} class={cn("min-h-screen bg-background text-foreground", className)} {...restProps}>
 	{#if contextual}
 		<div class={cn("grid min-h-screen", gridClass)}>
-			{#if rail}
+			{#if hasRail && rail}
 				<div class="hidden min-h-screen lg:block">{@render rail()}</div>
 			{/if}
 
