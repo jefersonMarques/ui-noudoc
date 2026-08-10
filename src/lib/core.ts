@@ -17,5 +17,7 @@ export { default as AppSidebar } from "./components/noudoc/app-sidebar.svelte";
 export type { AppSidebarItem } from "./components/noudoc/app-sidebar.svelte";
 export { default as OrganizationRail } from "./components/noudoc/organization-rail.svelte";
 export type { OrganizationRailItem } from "./components/noudoc/organization-rail.svelte";
+export { default as OrganizationSwitcher } from "./components/noudoc/organization-switcher.svelte";
+export type { OrganizationSwitcherOption } from "./components/noudoc/organization-switcher.svelte";
 export { default as WorkspaceSwitcher } from "./components/noudoc/workspace-switcher.svelte";
 export type { WorkspaceSwitcherOption } from "./components/noudoc/workspace-switcher.svelte";
