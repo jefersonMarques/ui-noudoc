@@ -4,6 +4,7 @@
 	import AppSidebar from "$lib/components/noudoc/app-sidebar.svelte";
 	import OrganizationRail from "$lib/components/noudoc/organization-rail.svelte";
 	import OrganizationSwitcher from "$lib/components/noudoc/organization-switcher.svelte";
+	import ViewTabs from "$lib/components/noudoc/view-tabs.svelte";
 	import WorkspaceSwitcher from "$lib/components/noudoc/workspace-switcher.svelte";
 	import { Badge } from "$lib/components/ui/badge/index.js";
 
@@ -20,6 +21,12 @@
 	const workspaces = [
 		{ id: "blog", label: "Blog F10", description: "f10.com.br" },
 		{ id: "academy", label: "Academy", description: "Conteúdo educacional" }
+	];
+
+	const views = [
+		{ id: "list", label: "Lista", href: "#", active: true },
+		{ id: "board", label: "Board", disabled: true, description: "Em breve" },
+		{ id: "calendar", label: "Calendário", href: "#" }
 	];
 
 	$: railItems = organizations.map((item) => ({ ...item, active: item.id === organizationId }));
@@ -66,12 +73,13 @@
 		<div class="p-5 sm:p-7">
 			<div class="mx-auto max-w-5xl">
 				<p class="text-sm text-muted-foreground">Meu trabalho</p>
-				<div class="mt-2 flex items-end justify-between gap-4 border-b pb-4">
+				<div class="mt-2 flex items-end justify-between gap-4 pb-3">
 					<div>
 						<h1 class="text-2xl font-semibold tracking-tight">Lista</h1>
 						<p class="mt-1 text-sm text-muted-foreground">Exemplo do shell adaptativo multi-entidade.</p>
 					</div>
 				</div>
+				<ViewTabs items={views} />
 				<div class="mt-4 divide-y rounded-lg border bg-card">
 					{#each ["Definir CTA principal", "Mapear conteúdo do site", "Criar plano editorial"] as task, index}
 						<div class="grid grid-cols-[1fr_160px_140px] gap-3 px-4 py-3 text-sm">
