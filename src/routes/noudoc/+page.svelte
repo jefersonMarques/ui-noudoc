@@ -11,6 +11,7 @@
 		description="Camada de produto construída sobre os componentes oficiais."
 	>
 		<Button href="/components" variant="outline">Componentes oficiais</Button>
+		<Button href="/noudoc/workspace-shell" variant="outline">Workspace shell</Button>
 		<Button>Novo workspace</Button>
 	</PageHeader>
 
