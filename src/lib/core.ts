@@ -10,3 +10,12 @@ export { default as LoadingState } from "./components/noudoc/loading-state.svelt
 export { default as PageHeader } from "./components/noudoc/page-header.svelte";
 export { default as SectionHeader } from "./components/noudoc/section-header.svelte";
 export { default as StatusBadge } from "./components/noudoc/status-badge.svelte";
+export { default as AppShell } from "./components/noudoc/app-shell.svelte";
+export type { AppShellNavItem } from "./components/noudoc/app-shell.svelte";
+export { default as AppHeader } from "./components/noudoc/app-header.svelte";
+export { default as AppSidebar } from "./components/noudoc/app-sidebar.svelte";
+export type { AppSidebarItem } from "./components/noudoc/app-sidebar.svelte";
+export { default as OrganizationRail } from "./components/noudoc/organization-rail.svelte";
+export type { OrganizationRailItem } from "./components/noudoc/organization-rail.svelte";
+export { default as WorkspaceSwitcher } from "./components/noudoc/workspace-switcher.svelte";
+export type { WorkspaceSwitcherOption } from "./components/noudoc/workspace-switcher.svelte";
