@@ -6,11 +6,13 @@
 		title = "Nada encontrado",
 		description = "",
 		actions,
+		children,
 		class: className
 	}: {
 		title?: string;
 		description?: string;
 		actions?: Snippet;
+		children?: Snippet;
 		class?: string;
 	} = $props();
 </script>
@@ -20,7 +22,9 @@
 	{#if description}
 		<p class="mx-auto mt-1 max-w-lg text-sm leading-6 text-muted-foreground">{description}</p>
 	{/if}
-	{#if actions}
-		<div class="mt-4 flex flex-wrap items-center justify-center gap-2">{@render actions()}</div>
+	{#if actions || children}
+		<div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+			{#if actions}{@render actions()}{:else}{@render children?.()}{/if}
+		</div>
 	{/if}
 </div>
