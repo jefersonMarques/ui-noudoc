@@ -9,7 +9,7 @@
     "dev": "vite dev",
     "build": "vite build && npm run prepack",
     "preview": "vite preview",
-    "prepare": "svelte-kit sync || echo ''",
+    "prepare": "svelte-kit sync && svelte-package",
     "prepack": "svelte-kit sync && svelte-package && publint",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -32,14 +32,69 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "svelte": "./dist/index.js"
+      "svelte": "./dist/index.js",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./core": {
+      "types": "./dist/core.d.ts",
+      "svelte": "./dist/core.js",
+      "import": "./dist/core.js",
+      "default": "./dist/core.js"
+    },
+    "./noudoc/app-shell": {
+      "types": "./dist/components/noudoc/app-shell.svelte.d.ts",
+      "svelte": "./dist/components/noudoc/app-shell.svelte",
+      "default": "./dist/components/noudoc/app-shell.svelte"
+    },
+    "./noudoc/app-header": {
+      "types": "./dist/components/noudoc/app-header.svelte.d.ts",
+      "svelte": "./dist/components/noudoc/app-header.svelte",
+      "default": "./dist/components/noudoc/app-header.svelte"
+    },
+    "./noudoc/app-sidebar": {
+      "types": "./dist/components/noudoc/app-sidebar.svelte.d.ts",
+      "svelte": "./dist/components/noudoc/app-sidebar.svelte",
+      "default": "./dist/components/noudoc/app-sidebar.svelte"
+    },
+    "./noudoc/organization-rail": {
+      "types": "./dist/components/noudoc/organization-rail.svelte.d.ts",
+      "svelte": "./dist/components/noudoc/organization-rail.svelte",
+      "default": "./dist/components/noudoc/organization-rail.svelte"
+    },
+    "./noudoc/organization-switcher": {
+      "types": "./dist/components/noudoc/organization-switcher.svelte.d.ts",
+      "svelte": "./dist/components/noudoc/organization-switcher.svelte",
+      "default": "./dist/components/noudoc/organization-switcher.svelte"
+    },
+    "./noudoc/workspace-switcher": {
+      "types": "./dist/components/noudoc/workspace-switcher.svelte.d.ts",
+      "svelte": "./dist/components/noudoc/workspace-switcher.svelte",
+      "default": "./dist/components/noudoc/workspace-switcher.svelte"
+    },
+    "./noudoc/view-tabs": {
+      "types": "./dist/components/noudoc/view-tabs.svelte.d.ts",
+      "svelte": "./dist/components/noudoc/view-tabs.svelte",
+      "default": "./dist/components/noudoc/view-tabs.svelte"
+    },
+    "./noudoc/empty-state": {
+      "types": "./dist/components/noudoc/empty-state.svelte.d.ts",
+      "svelte": "./dist/components/noudoc/empty-state.svelte",
+      "default": "./dist/components/noudoc/empty-state.svelte"
     },
     "./styles.css": {
       "default": "./dist/styles.css"
     }
   },
   "peerDependencies": {
-    "svelte": "^5.0.0"
+    "@internationalized/date": "^3.12.2",
+    "@lucide/svelte": "^1.21.0",
+    "bits-ui": "^2.18.1",
+    "clsx": "^2.1.1",
+    "svelte": "^5.0.0",
+    "tailwind-merge": "^3.6.0",
+    "tailwind-variants": "^3.2.2",
+    "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
     "@fontsource-variable/inter": "^5.2.8",
